@@ -20,7 +20,7 @@ Welcome to **ChitraShaala** — a powerful **image management system** inspired 
 - **Share Album**: Add users by email for view-only access
 
 ### 🖼️ Image Upload & Metadata
-- Upload image files (jpg, png, gif only, max 5MB)
+- Upload image files (jpg, png, gif only, max 2MB)
 - Add optional metadata:
   - Tags (e.g., "sunset", "vacation")
   - Person name (if tagged)
