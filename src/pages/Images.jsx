@@ -53,7 +53,7 @@ const Images = () => {
 
         <div className="flex items-center gap-2">
           {/* Share Album */}
-          {user._id === state.ownerId && (
+          {user._id === state?.ownerId && (
             <>
               <MdShare
                 onClick={() => setShowShareAlbum(true)}
@@ -64,7 +64,6 @@ const Images = () => {
                 isOpen={showShareAlbum}
                 setIsOpen={setShowShareAlbum}
                 albumId={albumId}
-                sharedUsers={state?.sharedUsers}
               />
             </>
           )}
@@ -80,7 +79,7 @@ const Images = () => {
       <p className="text-lg mt-4">{state?.description || ""}</p>
 
       {/* Album Filters */}
-      {user._id === state.ownerId && (
+      {user._id === state?.ownerId && (
         <div className="flex justify-start items-center  mt-4 text-sm font-medium">
           <div
             onClick={() => setCurrFilter("all")}
@@ -120,7 +119,7 @@ const Images = () => {
       {!imageLoading && images.length === 0 && (
         <div className="w-full h-80 flex flex-col items-center justify-center gap-4">
           <p className="text-xl text-black">Album is empty</p>
-          {user._id === state.ownerId && (
+          {user._id === state?.ownerId && (
             <button
               onClick={() => setUploadModal(true)}
               className="px-4 py-2 bg-blue-600 text-white hover:bg-blue-800 cursor-pointer rounded-full "
@@ -146,7 +145,7 @@ const Images = () => {
                 alt={image.name}
               />
               {/* Favorite */}
-              {user._id === state.ownerId && (
+              {user._id === state?.ownerId && (
                 <Favorite imageData={image} setRefetch={setRefetch} />
               )}
 
@@ -172,7 +171,7 @@ const Images = () => {
       )}
 
       {/* Add Image Button */}
-      {user._id === state.ownerId && images.length !== 0 && (
+      {user._id === state?.ownerId && images.length !== 0 && (
         <div className="fixed bottom-15 right-25 bg-blue-600 text-white inline-block p-2 rounded-full">
           <MdOutlineAdd
             onClick={() => setUploadModal(true)}
@@ -181,7 +180,7 @@ const Images = () => {
         </div>
       )}
 
-      {user._id === state.ownerId && showUploadModal && (
+      {user._id === state?.ownerId && showUploadModal && (
         <UploadImage
           isOpen={showUploadModal}
           setIsOpen={setUploadModal}

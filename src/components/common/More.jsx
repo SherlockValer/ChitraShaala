@@ -23,7 +23,7 @@ const More = ({ album }) => {
         onClick={() => setShowMore((show) => !show)}
         className="text-lg rounded-full hover:bg-gray-200"
       />
-      {user._id === album.ownerId && (
+      {user._id === album?.ownerId && (
         <>
           {showMore && (
             <div className="flex flex-col absolute top-8 z-10 right-2 py-4 border border-slate-300 bg-[#f0f4f9] shadow-sm rounded-sm">
@@ -62,7 +62,6 @@ const More = ({ album }) => {
               isOpen={showShareAlbum}
               setIsOpen={setShowShareAlbum}
               albumId={album._id}
-              sharedUsers={album.sharedUsers}
             />
           )}
 
