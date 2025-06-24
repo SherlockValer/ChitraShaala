@@ -74,7 +74,7 @@ Here’s what powers this project:
 - 📦 **Mongoose** – ODM for schema management
 - 🔐 **Google OAuth2** – Secure sign-in
 - 🪪 **JWT** – Access token handling and route protection
-- 🖼️ **Multer** – File upload handling
+- 🖼️ **Multer + Cloudinary** – File upload handling
 - 📁 **fs & path** – File size/type validation
 
 ---
