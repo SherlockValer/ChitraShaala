@@ -65,7 +65,6 @@ Here’s what powers this project:
 - ⚛️ **React (Vite)** – For blazing-fast development
 - 🧭 **React Router** – SPA routing
 - 💨 **Tailwind CSS** – Utility-first styling
-- 📊 **Chart.js** – For visual reports
 - 🌐 **Axios** – API requests
 
 ### 🗄️ Backend
