@@ -12,13 +12,15 @@ const More = ({ album }) => {
   const [showShareAlbum, setShowShareAlbum] = useState(false);
   const [showRenameModal, setShowRenameModal] = useState(false);
 
+  const handleMoreDiv = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+  };
+
   return (
-    <div>
+    <div onClick={handleMoreDiv}>
       <MdMoreVert
-        onClick={(e) => {
-          e.stopPropagation();
-          setShowMore((show) => !show);
-        }}
+        onClick={() => setShowMore((show) => !show)}
         className="text-lg rounded-full hover:bg-gray-200"
       />
       {user._id === album?.ownerId && (
