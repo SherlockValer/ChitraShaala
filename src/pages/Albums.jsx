@@ -28,7 +28,6 @@ const Albums = () => {
 
     if (currSort === "mostRecent") {
       data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      console.log(data);
       setFiltered(data);
     } else if (currSort === "lastMod") {
       data.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));

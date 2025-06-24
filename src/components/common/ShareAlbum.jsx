@@ -46,7 +46,6 @@ function ShareAlbum({ isOpen, setIsOpen, albumId }) {
         }
       }
 
-      console.log("Valid Email Address!");
     } else {
       setMessage((prev) => ({
         ...prev,
